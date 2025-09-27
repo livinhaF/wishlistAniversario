@@ -1,0 +1,5 @@
+# Dependências gigantes que podem ser recriadas
+/node_modules
+
+# Arquivo de variáveis de ambiente com segredos (MONGO_URI)
+.env
