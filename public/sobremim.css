@@ -1,128 +1,107 @@
-/* ---------- ESTILO BASE ---------- */
+/*Estilo base*/
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Cinzel Decorative', serif; /* fonte decorativa, vibe contos de fada */
-    background: radial-gradient(circle at bottom, #1a1a2e, #0f0f1a); /* degrade escuro pra magia noturna */
-    color: #fdfdfd;
-    min-height: 100vh;
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a2e;
+  padding: 40px;
 }
 
-/* container central da página */
+/*Container central página*/
 .sobre-container {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(20, 20, 30, 0.95); /* fundo semi-transparente, parece flutuar */
-    border-radius: 15px;
-    border: 2px solid #daa520; /* dourado pra manter o clima mágico */
-    box-shadow: 0 6px 20px rgba(214, 175, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* títulos e subtítulos */
-h1 {
-    font-size: 2.2rem;
-    color: #daa520; /* dourado chamativo */
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #ffd700; /* brilho mágico */
-}
-h2 { 
-    font-size: 1.5rem; 
-    margin-top: 30px;
-    margin-bottom: 12px;
+/*--------formulário-----------*/
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-/* parágrafos */
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #cfcfcf;
-    margin-bottom: 20px;
+form button {
+  background-color: #25283b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* ---------- FORMULÁRIO ---------- */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* espaço entre os campos */
-    margin-top: 20px;
-}
+/*--------Mural de Mensagens----------*/
 
-/* inputs de texto e textarea */
-input[type="text"], textarea {
-    padding: 12px;
-    border-radius: 12px;
-    border: 2px solid #daa520; /* contorno dourado */
-    background-color: #1a1a2e;
-    color: #fdfdfd;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s ease;
-}
-input[type="text"]:focus, textarea:focus {
-    border-color: #ffd700; /* foco com brilho mágico */
-    box-shadow: 0 0 8px #ffd700;
-}
-
-/* textarea maior pra escrever mensagem */
-textarea { 
-    resize: vertical; 
-    min-height: 100px;
-}
-
-/* botão de enviar */
-button {
-    padding: 12px 20px;
-    font-size: 1rem;
-    border-radius: 25px;
-    border: none;
-    background-color: #d4af37; /* dourado */
-    color: #25283b;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-button:hover {
-    background-color: #ffd700; /* brilho quando passa o mouse */
-    transform: scale(1.05); /* efeito de "pulo" mágico */
-}
-
-/* ---------- MURAL DE MENSAGENS ---------- */
 #mensagens {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  margin-top: 30px;
 }
 
-/* cada mensagem */
+/*cada mensagem*/
 .mensagem {
-    padding: 12px 18px;
-    border-radius: 12px;
-    background: rgba(214, 175, 0, 0.1); /* fundo dourado suave */
-    border: 1px solid #daa520; /* borda dourada */
-    text-align: left;
+  background-color: #f0f0f0;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.mensagem strong { color: #ffd700; } /* nome em dourado */
-.mensagem em { font-style: italic; }
-.mensagem small { font-size: 0.8rem; color: #cfcfcf; }
 
-/* ---------- ESTRELAS ---------- */
-.star {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite ease-in-out; /* piscando como mágica */
+.mensagem strong {
+  color: #25283b;
 }
+
+.mensagem small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8em;
+  color: #666;
+}
+
 @keyframes twinkle {
-    0%, 100% { opacity: 0.2; }
-    50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: .2
+  }
+
+  50% {
+    opacity: 1
+  }
 }
-/* posição aleatória das estrelas */
-.star:nth-of-type(1){ top:20%; left:30%; animation-delay:1s;}
-.star:nth-of-type(2){ top:50%; left:70%; animation-delay:2s;}
-.star:nth-of-type(3){ top:80%; left:40%; animation-delay:1.5s;}
-.star:nth-of-type(4){ top:10%; left:80%; animation-delay:2.5s;}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+/*posição aleatória das estrelas*/
+.star:nth-of-type(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.star:nth-of-type(2) {
+  top: 50%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.star:nth-of-type(3) {
+  top: 80%;
+  left: 40%;
+  animation-delay: 1.5s;
+}
+
+.star:nth-of-type(4) {
+  top: 10%;
+  left: 80%;
+  animation-delay: 2.5s;
+}

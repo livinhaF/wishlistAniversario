@@ -1,10 +1,15 @@
 /* ---------- RESET E ESTILO BASE ---------- */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Cinzel Decorative', serif; /* fonte decorativa */
-  background: radial-gradient(circle at bottom, #1a1a2e, #0f0f1a); /* fundo escuro com degrade */
+  font-family: 'Cinzel Decorative', serif;
+  /* fonte decorativa */
+  background: radial-gradient(circle at bottom, #1a1a2e, #0f0f1a);
+  /* fundo escuro com degrade */
   color: #fdfdfd;
   text-align: center;
   min-height: 100vh;
@@ -30,6 +35,7 @@ body {
   font-size: 1.2rem;
   transition: 0.3s ease;
 }
+
 .simple-btn:hover {
   background: #d4af37;
   transform: scale(1.05);
@@ -42,6 +48,7 @@ body {
   right: 20px;
   z-index: 100;
 }
+
 .calendario-box {
   background-color: #daa520;
   border-radius: 12px;
@@ -50,6 +57,7 @@ body {
   padding: 12px;
   color: #cfcfcf;
 }
+
 .calendario-header {
   font-size: 1.1em;
   font-weight: bold;
@@ -58,42 +66,132 @@ body {
   padding: 6px;
   border-radius: 8px;
 }
+
 .calendario-body {
   font-size: 1.4em;
   font-weight: bold;
 }
 
 /* títulos */
-h1 { font-size: 2.2rem; color: #daa520; margin: 28px 0 6px; text-shadow: 0 0 10px #ffd700; }
-.subtitle { color: #cfcfcf; margin-bottom: 24px; }
+h1 {
+  font-size: 2.2rem;
+  color: #daa520;
+  margin: 28px 0 6px;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.subtitle {
+  color: #cfcfcf;
+  margin-bottom: 24px;
+}
 
 /* ícone sobre mim */
-.sobre-icon { position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; cursor: pointer; }
-.sobre-icon img { width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.3s ease; }
-.sobre-icon:hover img { transform: scale(1.1); }
+.sobre-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.sobre-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sobre-icon:hover img {
+  transform: scale(1.1);
+}
 
 /* estrelas piscando */
-@keyframes twinkle { 0%,100%{opacity:.2} 50%{opacity:1} }
-.star { position: absolute; width: 3px; height: 3px; background: white; border-radius: 50%; animation: twinkle 2s infinite ease-in-out; }
-.star:nth-of-type(1){ top:20%; left:30%; animation-delay:1s;}
-.star:nth-of-type(2){ top:50%; left:70%; animation-delay:2s;}
-.star:nth-of-type(3){ top:80%; left:40%; animation-delay:1.5s;}
-.star:nth-of-type(4){ top:10%; left:80%; animation-delay:2.5s;}
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: .2
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+.star:nth-of-type(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.star:nth-of-type(2) {
+  top: 50%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.star:nth-of-type(3) {
+  top: 80%;
+  left: 40%;
+  animation-delay: 1.5s;
+}
+
+.star:nth-of-type(4) {
+  top: 10%;
+  left: 80%;
+  animation-delay: 2.5s;
+}
 
 /* ---------- CARDS ---------- */
-.cards-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding: 30px; max-width: 1100px; margin: 0 auto 60px; }
-.card { width: 260px; height: 360px; perspective: 1000px; } /* perspectiva pra flip funcionar */
-.card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.8s; }
-.card:hover .card-inner { transform: rotateY(180deg); }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
 
-.card-front, .card-back {
+.card {
+  width: 260px;
+  height: 360px;
+  perspective: 1000px;
+}
+
+/* perspectiva pra flip funcionar */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
   position: absolute;
   inset: 0;
   border-radius: 15px;
-  backface-visibility: hidden; /* evita que o verso apareça antes da hora */
-  background: rgba(20,20,30,0.95);
+  backface-visibility: hidden;
+  /* evita que o verso apareça antes da hora */
+  background: rgba(20, 20, 30, 0.95);
   border: 2px solid #daa520;
-  box-shadow: 0 6px 20px rgba(255,215,0,0.12);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,8 +199,19 @@ h1 { font-size: 2.2rem; color: #daa520; margin: 28px 0 6px; text-shadow: 0 0 10p
   padding: 18px;
   color: #fdfdfd;
 }
-.card-front img { width: 90%; border-radius: 8px; margin-bottom: 12px; }
-.card-back { transform: rotateY(180deg); font-size: .95rem; line-height:1.4; text-align:center; }
+
+.card-front img {
+  width: 90%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-size: .95rem;
+  line-height: 1.4;
+  text-align: center;
+}
 
 /* botão do verso do card */
 .btn-compras {
@@ -117,8 +226,21 @@ h1 { font-size: 2.2rem; color: #daa520; margin: 28px 0 6px; text-shadow: 0 0 10p
   box-shadow: 0 4px 8px rgba(214, 204, 204, 0.2);
   transition: background 0.3s ease, transform 0.2s ease;
 }
-.btn-card:hover { background-color: #ffd700; transform: scale(1.05); }
+
+.btn-card:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
 
 /* responsividade */
-@media (max-width: 860px) { .card { width: 46%; } }
-@media (max-width: 520px) { .card { width: 90%; } }
+@media (max-width: 860px) {
+  .card {
+    width: 46%;
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    width: 90%;
+  }
+}
