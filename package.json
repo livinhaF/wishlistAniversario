@@ -2,7 +2,7 @@
   "name": "wishlist19",
   "version": "1.0.0",
   "description": "Projeto para salvar mensagens de lista de desejos com Node.js e MongoDB",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
