@@ -47,8 +47,10 @@ app.get('/mensagens', async (req, res) => {
 });
 
 // inicia o servidor na porta 3000 ou vercel
-const PORT = process.env.PORT || 3000; // Usa a porta do ambiente (Vercel) ou 3000 (Local)
+/**const PORT = process.env.PORT || 3000; // Usa a porta do ambiente (Vercel) ou 3000 (Local)
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
-});
+});**/
+
+module.exports = app;
