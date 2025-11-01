@@ -86,13 +86,32 @@ h1 {
 }
 
 /* ícone sobre mim */
+
+@keyframes elfo-flutuar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg); /* Sobe 5px e inclina 1 grau para dar um efeito*/
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 .sobre-icon {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+
+  /* Aplica a animação: */
+  animation: elfo-flutuar 1.5s ease-in-out infinite;
+  
+  /* Garante que o elemento seja um bloco para a animação de flutuar ser mais estável*/
+  display: block;
 }
 
 .sobre-icon img {
