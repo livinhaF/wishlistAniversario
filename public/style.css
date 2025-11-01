@@ -263,61 +263,37 @@ h1 {
     width: 90%;
   }
 }
-
-/* Ajuste de tablet e telas menores que o máximo (1100px) */
-@media (max-width: 1100px) {
-    .cards-container {
-        padding: 30px 15px; /* Reduz o padding lateral do container principal */
-    }
-}
-
-/* Ajuste principal para 2 colunas no Tablet/Celular Horizontal */
-@media (max-width: 860px) {
-    .cards-container {
-        /* Muda para 2 colunas iguais */
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 20px; /* Reduz um pouco o espaçamento entre cards */
-        max-width: 600px; /* Limita a largura para melhor visualização no tablet */
-        margin: 0 auto 60px;
-    }
-    
-    .card {
-        width: 100%; /* O card ocupa toda a sua coluna na grade (1fr) */
-    }
-    
-    /* Centraliza o texto para melhor leitura no tablet */
-    h1 {
-        font-size: 2rem;
-    }
-    .subtitle {
-        font-size: 1.1rem;
-    }
-}
-
-/* Ajuste para Celulares (Layout de 1 Coluna e Ícones Fixos) */
+/* ------------------------------------------------ */
+/* AJUSTE PARA CELULARES (Layout de 1 Coluna) */
+/* ------------------------------------------------ */
 @media (max-width: 520px) {
     
-    /* LAYOUT PRINCIPAL: 1 COLUNA */
+    /* LAYOUT PRINCIPAL: 1 COLUNA (Ajustado para forçar a quebra) */
     .cards-container {
-        /* Muda para 1 coluna */
+        /* Garante quebra forçada para 1 coluna */
         grid-template-columns: 1fr; 
-        max-width: 90%; /* Deixa o container ocupar quase toda a largura */
+        
+        /* Ajusta o container para ocupar a tela e ter padding interno */
+        max-width: 90%; 
         padding: 10px;
+        
+        /* Centraliza os cards quando há apenas 1 coluna */
+        justify-content: center; 
     }
     
     .card {
-        width: 100%; /* Garante que o card preencha a coluna */
-        height: auto; /* Deixa a altura ser definida pelo conteúdo */
+        width: 100%; /* Garante que o card preencha a largura total (90%) */
+        height: auto; 
     }
     
     /* AJUSTE DOS ÍCONES FIXOS */
     
-    /* Elfo (.sobre-icon): Mova para a ESQUERDA para evitar sobreposição com o contador */
+    /* Elfo (.sobre-icon): Mova para a ESQUERDA para evitar sobreposição */
     .sobre-icon {
         right: auto; 
         left: 10px; 
         top: 10px; 
-        width: 50px; /* Reduz um pouco o tamanho para não poluir tanto a tela */
+        width: 50px; 
         height: 50px;
     }
     
@@ -325,21 +301,14 @@ h1 {
     .calendario-contador {
         top: 10px;
         right: 10px;
-        width: 120px; /* Reduz um pouco a largura */
+        width: 120px;
         padding: 8px;
     }
     
-    .calendario-header {
-        font-size: 0.9em;
-    }
-    .calendario-body {
-        font-size: 1.2em;
-    }
-    
-    /* Ajuste de Títulos e Parágrafos */
+    /* AJUSTE DE TAMANHO */
     h1 {
         font-size: 1.6rem;
-        margin-top: 65px; /* Adiciona margem para o título não ficar por baixo dos ícones */
+        margin-top: 65px; /* Evita que o título fique sob os ícones */
     }
     .subtitle {
         font-size: 1rem;
