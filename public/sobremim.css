@@ -106,30 +106,51 @@ form button {
   animation-delay: 2.5s;
 }
 
-/* ------------------------------------- */
-/* NOVO CÓDIGO DE RESPONSIVIDADE (MOBILE) */
-/* ------------------------------------- */
 @media (max-width: 600px) {
 
-  /* 1. Ajuste do body para telas menores: */
-  /* Remove o padding lateral excessivo no celular */
   body {
-    padding: 20px 10px; /* Padding menor em cima/embaixo e bem pequeno nas laterais */
+    padding: 20px 10px;
   }
-
-  /* 2. Ajuste do container principal: */
-  /* Faz o container ocupar a largura total do celular */
   .sobre-container {
-    max-width: 100%; /* Permite que ele cresça para preencher o espaço disponível */
-    padding: 20px; /* Reduz o padding interno para dar mais espaço ao conteúdo */
-    border-radius: 0; /* Opcional: remover o arredondamento para um visual mais 'full-screen' */
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
   }
 
-  /* 3. Ajuste de elementos internos (se precisar): */
-  /* Caso algum elemento interno precise de menos margem/padding no celular */
-  /*
-  #mensagens {
-    margin-top: 20px;
+  
+  /* NOVOS AJUSTES PARA AUMENTAR */
+  
+
+  /* Tornar os títulos mais legíveis */
+  .sobre-container h1 {
+    font-size: 1.8em; /* Aumenta um pouco o H1 */
   }
-  */
+  .sobre-container h2 {
+    font-size: 1.4em; /* Aumenta um pouco o H2 */
+  }
+
+  /* Aumentar a fonte do texto principal para facilitar a leitura */
+  .sobre-container p {
+    font-size: 1em; /* Garante um tamanho padrão legível */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor leitura */
+  }
+
+  /* Aumentar o tamanho do texto dentro dos campos de formulário */
+  form input,
+  form textarea {
+    padding: 12px; /* Aumenta o padding para o campo ficar maior e mais fácil de tocar */
+    font-size: 1em; /* Garante que o texto digitado seja de bom tamanho */
+  }
+
+  /* Aumentar o botão */
+  form button {
+    padding: 12px 25px; /* Aumenta o botão para ser um "alvo de toque" maior */
+    font-size: 1em;
+  }
+
+  /* Ajustar o mural de mensagens (opcional, se parecer pequeno) */
+  .mensagem {
+    padding: 15px; /* Mais espaço interno para cada mensagem */
+    font-size: 1em;
+  }
 }
