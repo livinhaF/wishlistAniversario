@@ -105,3 +105,31 @@ form button {
   left: 80%;
   animation-delay: 2.5s;
 }
+
+/* ------------------------------------- */
+/* NOVO CÓDIGO DE RESPONSIVIDADE (MOBILE) */
+/* ------------------------------------- */
+@media (max-width: 600px) {
+
+  /* 1. Ajuste do body para telas menores: */
+  /* Remove o padding lateral excessivo no celular */
+  body {
+    padding: 20px 10px; /* Padding menor em cima/embaixo e bem pequeno nas laterais */
+  }
+
+  /* 2. Ajuste do container principal: */
+  /* Faz o container ocupar a largura total do celular */
+  .sobre-container {
+    max-width: 100%; /* Permite que ele cresça para preencher o espaço disponível */
+    padding: 20px; /* Reduz o padding interno para dar mais espaço ao conteúdo */
+    border-radius: 0; /* Opcional: remover o arredondamento para um visual mais 'full-screen' */
+  }
+
+  /* 3. Ajuste de elementos internos (se precisar): */
+  /* Caso algum elemento interno precise de menos margem/padding no celular */
+  /*
+  #mensagens {
+    margin-top: 20px;
+  }
+  */
+}
